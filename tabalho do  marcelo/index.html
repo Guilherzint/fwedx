@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Guilherme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+    <header>
+        <h2>Pizzaria Bella Notte</h2>
+        <img src="img/img1.webp"  width="150">
+        <p>.</p>
+    </header>
+      
+        <div class="tab-container">
+            <div class="tabs">
+              <button class="tab-link active" onclick="openTab(event, 'tab1')">Um pouco sobre nós!</button>
+              <button class="tab-link" onclick="openTab(event, 'tab2')">Cardápio</button>
+              <button class="tab-link" onclick="openTab(event, 'tab3')">Contato</button>
+            </div>
+            
+            <div id="tab1" class="tab-content">
+              <h2>Conheça a Bella Notte em Bauru!</h2>
+
+              <img src="img/img2.jpg" width="250">
+              <p> dia 1º de setembro de 2023, abri a Bella Notte, uma pizzaria em Bauru que traz o sabor autêntico da Itália para a cidade. Com pizzas preparadas com ingredientes frescos e um cardápio que inclui desde clássicos até opções inovadoras, a Bella Notte oferece uma experiência gastronômica única. Além das pizzas, você pode desfrutar de entradas sofisticadas, massas artesanais e sobremesas irresistíveis. O ambiente é acolhedor e elegante, refletindo o carinho e a dedicação que coloquei em cada detalhe. Venha nos visitar e descubra um pedacinho da Itália no coração de Bauru!
+
+              </p>
+            </div>
+            
+            <div id="tab2" class="tab-content" style="display:none">
+              <h2>Minhas pizzas</h2>
+              <P>Pizza de Calabresa</P>
+              <img src="img/img3.webp" width="300" alt="Pizza de Calabresa">
+              <p>Pizza de Frango</p>
+              <img src="img/img4.jfif" width="300" alt="Pizza de Frango">
+              <p>Pizza de Mussarela</p>
+              <img src="img/img5.jpg">
+            </div>
+            
+            <div id="tab3" class="tab-content" style="display:none">
+              <h2>Contato</h2>
+              <p>Eu sou o Guilherme SIlva Lacerda, dono dessa pizzaria</p>
+              <img src="img/foto de perfil.jpg" alt="">
+              <p>Meu Email: Silvagui.lacerda@gmail.com</p>
+              <p>Nosso instagram: BellaNottepizzas</p>
+              <p>Nosso Whatsapp: 14 99174-9763</p>
+            </div>
+          </div>
+          
+          <script>
+            function openTab(evt, tabName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tab-content");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tab-link");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(tabName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+          </script>
+          
+</body>
+</html>
